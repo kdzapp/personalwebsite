@@ -277,6 +277,7 @@ img {
 .o-footer {
   padding: 12px 0;
   text-align: center;
+  color: #FFFFFF;
 }
 
 @media all and (min-width: 480px) {
