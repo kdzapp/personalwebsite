@@ -1,0 +1,85 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width,initial-scale=1.0')
+    title Kyle Zappitell
+    meta(name='description', content='Some slide and push menu demos using CSS3 transitions.')
+    link(rel='stylesheet', href='css/font-awesome.min.css')
+    link(rel='stylesheet', href='css/homebar.css')
+  body
+    #o-wrapper.o-wrapper
+      header.o-header
+        // Make Hamburger Button
+        .pos
+          button#c-button--push-top.c-hamburger.c-hamburger--rot
+            span
+      // /o-header
+      main.o-content
+        .o-container
+          h1.o-header__title Who Am I?
+          p.o-header__para
+            | Kyle Zappitell is currentlly enrolled as a freshman at the University of Michigan in Ann Arbor. He plans
+            | major in Computer Science and minor in Astrophysics. In Kyle's freetime he loves to code random projects. If you don't find
+            | Kyle doing homework or coding in his room, he is likely traveling - his favorite activity.
+        // /o-container
+      // /o-content
+      footer.o-footer
+        .o-container
+      // /o-footer
+    // /o-wrapper
+    nav#c-menu--push-top.c-menu.c-menu--push-top(style='overflow: hidden;')
+      button.c-menu__close
+        strong x
+      ul.c-menu__items
+        li.c-menu__item
+          a.c-menu__link(target='_blank', href='https://drive.google.com/file/d/0BzfEBMv92RsmZ0tNbWxqTnJwTkU/view?usp=sharing') Resume
+        li.c-menu__item
+          a.c-menu__link(href='http://github.com/kdzapp', target='_blank') Code
+        li.c-menu__item
+          a.c-menu__link(href='mailto:kdzapp@umich.edu') Contact Me
+    // /c-menu push-top
+    #c-mask.c-mask
+    // /c-mask
+    // menus script
+    script(src='js/dist/menu.js')
+    script.
+      /**
+      * Push top instantiation and action.
+      */
+      (function() {
+      "use strict";
+      var toggles = document.querySelectorAll(".c-hamburger");
+      for (var i = toggles.length - 1; i >= 0; i--) {
+      var toggle = toggles[i];
+      toggleHandler(toggle);
+      };
+      var toggles = document.querySelectorAll(".c-menu__close");
+      for (var i = toggles.length - 1; i >= 0; i--) {
+      var toggle = toggles[i];
+      toggleHandler(toggle);
+      };
+      function toggleHandler(toggle) {
+      toggle.addEventListener( "click", function(e) {
+      var burger = document.getElementById("c-button--push-top");
+      e.preventDefault();
+      (burger.classList.contains("is-active") === true) ? burger.classList.remove("is-active") : burger.classList.add("is-active");
+      });
+      }
+      })();
+      var pushTop = new Menu({
+      wrapper: '#o-wrapper',
+      type: 'push-top',
+      menuOpenerClass: '.c-button',
+      maskId: '#c-mask'
+      });
+      var pushTopBtn = document.querySelector('#c-button--push-top');
+      pushTopBtn.addEventListener('click', function(e) {
+      e.preventDefault;
+      var burger = document.getElementById("c-button--push-top");
+      if(burger.classList.contains("is-active") === false)
+      {
+      burger.classList.add("is-active");
+      }
+      pushTop.open();
+      });

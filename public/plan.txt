@@ -1,0 +1,13 @@
+Box Each Element in Navbar
+http://callmenick.com/post/nicer-icon-hover-effects-with-css3-transitions
+
+Load Animation....
+http://callmenick.com/post/css-spinners-loaders
+
+
+Colors
+http://bootflat.github.io/color-picker.html
+
+
+Bootstrap Ref
+http://getbootstrap.com/
