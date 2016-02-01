@@ -310,21 +310,16 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-left: 25px;
+}
+.c-menu__item {
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
-
-/**
- * Top and bottom menus
- *
- * Slide and push menus coming in from the top and bottom inherit a lot of
- * common styles. We'll start each of them off by doing up the common styles
- * for each version, followed by individual styles.
- *
- * The various versions are governed by modifier classes.
-
-/**
- * Common modifiers for top/bottom menus
- */
+.c-menu__item:hover {
+  background-color: #1d7d44;
+}
 
 .c-menu--slide-top,
 .c-menu--push-top {
@@ -410,7 +405,7 @@ body.has-active-menu {
  */
 .c-menu__close {
   color: #fff;
-  background-color: #219150;
+  background-color: #186839;
   font-size: 14px;
   border: none;
   box-shadow: none;
@@ -475,7 +470,7 @@ body.has-active-menu {
   text-indent: -9999px;
   appearance: none;
   box-shadow: none;
-  border-radius: none;
+  border-radius: 20px;
   border: none;
   cursor: pointer;
   background-color: #22A7F0;
@@ -489,7 +484,6 @@ body.has-active-menu {
 .c-hamburger span {
   display: block;
   position: absolute;
-  padding-bottom: 5px;
   top: 30px;
   left: 15px;
   right: 15px;
@@ -502,10 +496,9 @@ body.has-active-menu {
   position: absolute;
   display: block;
   left: 0;
-  width: 100%;
+  width: 40%;
   height: 4px;
   background-color: #fff;
-  padding-top: 12px;
   content: "";
 }
 
