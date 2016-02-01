@@ -405,7 +405,7 @@ body.has-active-menu {
  */
 .c-menu__close {
   color: #fff;
-  background-color: #186839;
+  background-color: #1d7d44;
   font-size: 14px;
   border: none;
   box-shadow: none;
@@ -414,6 +414,10 @@ body.has-active-menu {
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
+}
+
+.c-menu__close:hover {
+  background-color: #186839;
 }
 
 .c-menu__close:focus {
