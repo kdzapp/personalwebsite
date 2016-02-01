@@ -58,6 +58,8 @@ body {
   font-family: "Oxygen", Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.8;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
 }
 
 /* -----------------------------------------------------------------------------
